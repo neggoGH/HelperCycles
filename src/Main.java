@@ -5,6 +5,9 @@ public class Main {
         System.out.println("Справка: ");
         System.out.println("    1. if");
         System.out.println("    2. switch");
+        System.out.println("    3. for");
+        System.out.println("    4. while");
+        System.out.println("    5. do-while");
         System.out.println("Выберете: ");
 
         choiсe = (char)System.in.read();
