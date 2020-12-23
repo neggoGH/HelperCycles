@@ -2,21 +2,26 @@ public class Main {
     public static void main(String[] args)
             throws java.io.IOException {
         char choiсe, ignore;
-           do {
-                   System.out.println("Справка: ");
-                   System.out.println("    1. if");
-                   System.out.println("    2. switch");
-                   System.out.println("    3. for");
-                   System.out.println("    4. while");
-                   System.out.println("    5. do-while");
-                   System.out.println("Выберете: ");
+        for (; ; ) {
+            do {
+                System.out.println("Справка: ");
+                System.out.println("    1. if");
+                System.out.println("    2. switch");
+                System.out.println("    3. for");
+                System.out.println("    4. while");
+                System.out.println("    5. do-while");
+                System.out.println("    6. break");
+                System.out.println("    7. continu\n");
+                System.out.println("Для выхода нажмите \"q\"");
+                System.out.println("Выберете: ");
 
-                   choiсe = (char) System.in.read();
-                   do {
-                       ignore = (char) System.in.read();
-                   } while (ignore != '\n');
-               } while (choiсe < '1' | choiсe > '5');
-
+                choiсe = (char) System.in.read();
+                do {
+                    ignore = (char) System.in.read();
+                } while (ignore != '\n');
+            } while (choiсe < '1' | choiсe > '7' & choiсe != 'q');
+            if (choiсe == 'q') break;
+            System.out.println("\n");
             switch (choiсe) {
                 case '1':
                     System.out.println("Инструкция if:\n");
@@ -47,9 +52,17 @@ public class Main {
                     System.out.println("    инструкция;");
                     System.out.println("} while (условие);\n");
                     break;
-
+                case '6':
+                    System.out.println("Инструкция break");
+                    System.out.println("break,  или break метка;");
+                    break;
+                case '7':
+                    System.out.println("Инструкция continue:\n");
+                    System.out.println("continue: или continue метка;");
+                    break;
                 default:
                     System.out.println("Запрос не найден\n");
             }
         }
+    }
 }
