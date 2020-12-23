@@ -1,27 +1,22 @@
 public class Main {
     public static void main(String[] args)
-            throws java.io.IOException{
+            throws java.io.IOException {
         char choiсe, ignore;
-        boolean quit = false;
-        while (!quit) {
-            do {
-                System.out.println("Справка: ");
-                System.out.println("    1. if");
-                System.out.println("    2. switch");
-                System.out.println("    3. for");
-                System.out.println("    4. while");
-                System.out.println("    5. do-while");
-                System.out.println("Для выхода нажмите \"q\"");
-                System.out.println("Выберете: ");
+           do {
+                   System.out.println("Справка: ");
+                   System.out.println("    1. if");
+                   System.out.println("    2. switch");
+                   System.out.println("    3. for");
+                   System.out.println("    4. while");
+                   System.out.println("    5. do-while");
+                   System.out.println("Выберете: ");
 
-                choiсe = (char) System.in.read();
-                if (choiсe == 'q') {
-                    quit = true;
-                }
-                do {
-                    ignore = (char) System.in.read();
-                } while (ignore != '\n');
-            } while (choiсe < '1' | choiсe > '5');
+                   choiсe = (char) System.in.read();
+                   do {
+                       ignore = (char) System.in.read();
+                   } while (ignore != '\n');
+               } while (choiсe < '1' | choiсe > '5');
+
             switch (choiсe) {
                 case '1':
                     System.out.println("Инструкция if:\n");
@@ -52,11 +47,9 @@ public class Main {
                     System.out.println("    инструкция;");
                     System.out.println("} while (условие);\n");
                     break;
+
                 default:
                     System.out.println("Запрос не найден\n");
             }
         }
-    }
-
-
 }
